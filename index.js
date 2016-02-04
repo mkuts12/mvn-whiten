@@ -1,3 +1,5 @@
+#!/usr/bin/env node
+
 var download = require('./downloader');
 var tar = require('tar-fs');
 var fs = require('fs');
