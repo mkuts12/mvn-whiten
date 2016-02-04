@@ -1,14 +1,18 @@
 var child_process = require('child_process');
 var path = require('path');
 var tmp = require('tmp');
-var place = path.resolve(__dirname, 'ivy-2.3.0.jar');
+var place = path.resolve(__dirname, 'mvn-dependency-downloader-jar-with-dependencies.jar');
 var rm = require('rimraf');
+
+function buildString(groupId, artifactId, version) {
+  return `${groupId}:${artifactId}:${version}`;
+}
 
 module.exports = function(groupId, artifactId, version) {
   var dirData = tmp.dirSync();
   var dir = dirData.name;
   var rmdir = dirData.removeCallback;
-  var proc = `java -jar "${place}" -m2compatible -dependency "${groupId}" "${artifactId}" "${version}" -retrieve "${dir}/[artifact]-[revision](-[classifier]).[ext]"`;
+  var proc = `java -jar "${place}" -d "${dir}" ${buildString(groupId, artifactId, version)}`;
 
   console.log('downloading to ' + dir);
 
