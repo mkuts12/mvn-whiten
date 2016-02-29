@@ -9,8 +9,6 @@ Creates a `tar` archive for maven dependencies. yay.
 First make sure you have java installed or the program won't work.
 Install `mvn-whiten` with the command:
 
-*You must have java installed*
-
 ```bash
 npm install -g mvn-whiten
 ```
