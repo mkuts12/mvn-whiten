@@ -1,7 +1,7 @@
 # mvn-whiten
 
 > download maven jars to your internal artifactory server
-> using a precompiled [mvn-dd](https://github.com/Gemba/mvn-dd)
+> using a forked and precompiled [mvn-dd](https://github.com/AlexK-IL/mvn-dd)
 
 Creates a `tar` archive for maven dependencies. yay.
 
