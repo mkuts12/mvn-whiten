@@ -23,4 +23,6 @@ and there will be a new `tar` file.
 
 that's it.
 
+**If an exception is thrown complaining about missing dependencies, you might need to add extra repositores to your directory, see `extra-repos.json` for example.**
+
 *Tip: Copy the gradle profile from http://mvnrepository.com/ artifact as the parameter.*
