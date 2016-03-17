@@ -17,7 +17,7 @@ Might need sudo permissions on linux.
 ## Usage
 
 ```bash
-mvn-whiten <groupId>:<artifactId>:<version>
+mvn-whiten <groupId>:<artifactId>:<version> [<groupId>:<artifactId>:<version> ...]
 ```
 
 and there will be a new `tar` file.
