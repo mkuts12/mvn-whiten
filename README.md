@@ -1,7 +1,7 @@
 # mvn-whiten
 
 > download maven jars to your internal artifactory server
-> using a precompiled [mvn-dd](https://github.com/Gemba/mvn-dd)
+> using a forked and precompiled [mvn-dd](https://github.com/AlexK-IL/mvn-dd)
 
 Creates a `tar` archive for maven dependencies. yay.
 
@@ -17,11 +17,13 @@ Might need sudo permissions on linux.
 ## Usage
 
 ```bash
-mvn-whiten <groupId>:<artifactId>:<version>
+mvn-whiten <groupId>:<artifactId>:<version> [<groupId>:<artifactId>:<version> ...]
 ```
 
 and there will be a new `tar` file.
 
 that's it.
+
+**If an exception is thrown complaining about missing dependencies, you might need to add extra repositores to your directory, see `extra-repos.json` for example.**
 
 *Tip: Copy the gradle profile from http://mvnrepository.com/ artifact as the parameter.*
